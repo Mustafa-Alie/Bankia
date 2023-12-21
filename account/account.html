@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="icon/x-icon" href="account.css">
+    <link rel="stylesheet" href="./account.css">
+    <title>Bankia from Menofia | Account</title>
+</head>
+
+<body>
+
+    <nav class="nav">
+        <div class="nav__logo">
+            <img class="nav__logo__icone " src="/images/bank-logo.svg" alt="bank logo">
+            <span class="nav__logo__name gradient-color">bankia</span>
+        </div>
+
+        <p class="nav__greetings">Hello, <span class="nav__owner">X</span></p>
+
+
+
+        <form class="nav__form">
+
+            <input type="text" id="username" autocomplete="off" placeholder="username" class="nav__form__input">
+
+            <input type="password" id="pin" autocomplete="off" maxlength="4" placeholder="PIN" class="nav__form__input">
+
+            <a href="#" class="loginBtn">&rarr;</a>
+        </form>
+    </nav>
+
+    <main>
+        <div class="balance">
+            <div>
+                <p class="balance__title">Current Balance:</p>
+                <p class="balance__update">Last Update: <span class="balance__time">x</span></p>
+            </div>
+
+            <div class="balance__amount">0000€</div>
+        </div>
+
+        <Section class="transactions">
+
+        </Section>
+
+        <Section class="transfer">
+            <p class="section__title">Transfer money</p>
+            <form class="section__form">
+                <input type="text" placeholder="recipient's ID" class="section__form__item transfer__id">
+                <input type="number" placeholder="Amount" class="section__form__item transfer__amount">
+                <a href="#" class="section__form__arrow transfer__btn">&rarr;</a>
+            </form>
+        </Section>
+
+        <Section class="loan">
+            <p class="section__title">Request a loan</p>
+            <form class="section__form">
+                <input type="text" placeholder="Amount" class="section__form__item loan__amount">
+                <a href="#" class="section__form__arrow loan__btn">&rarr;</a>
+            </form>
+        </Section>
+
+        <Section class="close">
+            <p class="section__title">Close your account</p>
+            <form class="section__form">
+                <input type="text" placeholder="Confirm ID" class="section__form__item close__id">
+                <input type="password" maxlength="4" placeholder="Confirm PIN" class="section__form__item close__pin">
+                <a href="#" class="section__form__arrow close__btn">&rarr;</a>
+            </form>
+        </Section>
+
+        <button class="sortBtn">↑ SORT</button>
+
+    </main>
+
+
+    <footer>
+        <div class="footer__info">
+            <div class="footer__deposit">
+                <p class="footer__text footer__text--deposit">Depost:</p>
+                <p class="footer__value--deposit">0000€</p>
+                <span class="tooltip tooltip--deposit">Total deposit</span>
+            </div>
+
+            <div class="footer__withdraw">
+                <p class="footer__text">Withdraw:</p>
+                <p class="footer__value--withdraw">0000€</p>
+                <span class="tooltip tooltip--withdraw">Total withdraw</span>
+            </div>
+
+            <div class="footer__interest">
+                <p class="footer__text">Interest:</p>
+                <p class="footer__value--interest">0000€</p>
+                <span class="tooltip tooltip--interest">interest rate: 20% per year</span>
+            </div>
+        </div>
+
+        <div class="footer__logout">
+            <p class="footer__text">You will be logged out in</p>
+            <p class="footer__time">05:00</p>
+        </div>
+
+
+    </footer>
+
+    <script src="./account.js"></script>
+
+
+</body>
+
+
+
+
+
+</html>

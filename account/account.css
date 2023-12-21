@@ -1,0 +1,360 @@
+@import url("https://fonts.googleapis.com/css2?family=Kalam&family=Merienda:wght@400;500;600;700&family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: inherit;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px, even when user changes browser sittings*/
+}
+
+body {
+  background-color: #eee;
+  font-family: "Poppins", sans-serif;
+}
+
+/*  /////////////////////////////////// */
+/*              Nav             */
+
+.nav {
+  padding: 3rem;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 3rem;
+  margin-bottom: 5rem;
+}
+
+.nav__logo {
+  padding-left: 7%;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav__logo__icone {
+  max-height: 8rem;
+  max-width: 8rem;
+}
+
+.nav__logo__name {
+  font-family: "Poppins", sans-serif;
+  color: var(--logo-blue);
+
+  font-size: 5rem;
+  text-transform: uppercase;
+}
+
+.gradient-color {
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(183, 222, 235),
+    rgb(99, 99, 165)
+  );
+  background-size: cover;
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+.nav__greetings {
+  font-size: 4rem;
+  font-weight: 600;
+  transform: translateY(7rem);
+  color: rgba(23, 31, 78, 0.801);
+
+  opacity: 0;
+  transition: opacity 3s;
+}
+
+.nav__owner {
+  color: rgb(23, 31, 78);
+}
+
+.nav__text {
+  font-size: x-large;
+  color: rgb(94, 89, 89);
+}
+
+.nav__form {
+  position: relative;
+}
+
+.nav__form__input {
+  width: 15rem;
+  height: 3.5rem;
+  border: none;
+  text-align: center;
+  border-radius: 1rem;
+  background-color: white;
+
+  margin-right: 1rem;
+}
+
+.loginBtn {
+  text-decoration: none;
+  font-size: 3rem;
+  text-align: center;
+}
+
+/*  ///////////////////////   */
+/*          Balance         */
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  column-gap: 4rem;
+
+  max-width: 70%;
+  margin: 4rem auto 0 auto;
+
+  opacity: 0;
+  transition: all 3s;
+}
+
+.balance {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.balance__title {
+  color: rgba(53, 53, 53, 0.8);
+  font-size: 3rem;
+}
+
+.balance__update {
+  font-size: 2rem;
+  color: rgba(75, 74, 74, 0.8);
+}
+
+.balance__time {
+  font-weight: 800;
+  color: rgba(75, 74, 74, 0.8);
+}
+
+.balance__amount {
+  color: rgba(53, 53, 53, 0.8);
+  font-size: 5rem;
+  text-align: start;
+}
+
+.transactions {
+  grid-column: 1 / span 2;
+  grid-row: 2 / -1;
+
+  overflow: scroll;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  max-height: 50rem;
+}
+
+.trans {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1rem 5rem;
+  border-bottom: #eee solid 0.5rem;
+}
+
+.trans__info {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.trans__icone {
+  color: white;
+  font-size: 2rem;
+  padding: 0.2rem 1rem;
+  border-radius: 2rem;
+  text-transform: uppercase;
+}
+.trans__icone--withdraw {
+  background-image: linear-gradient(to top left, #e52a5a, #ff585f);
+}
+
+.trans__icone--deposit {
+  background-image: linear-gradient(to top left, #39b385, #9be15d);
+}
+
+.trans__date {
+  color: rgba(75, 74, 74, 0.8);
+  font-size: 1.5rem;
+}
+
+.trans__amount {
+  color: rgba(75, 74, 74, 0.8);
+  font-size: 2rem;
+}
+
+.section__title {
+  font-size: 2rem;
+  color: rgb(44, 43, 43);
+  text-align: center;
+}
+
+.section__form {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.section__form__item {
+  max-width: 12rem;
+  max-height: 7rem;
+  border-radius: 1rem;
+  border: none;
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.section__form__arrow {
+  font-size: 3rem;
+  text-decoration: none;
+  color: rgb(44, 43, 43);
+}
+
+/* to hide the increment and decrement arrows in input number:
+/* For Chrome and Safari */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* For Firefox */
+input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+.transfer {
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(183, 222, 235),
+    rgb(99, 99, 165)
+  );
+
+  border-radius: 1rem;
+  padding: 3rem;
+  max-height: 13rem;
+  margin-bottom: 0;
+}
+
+.loan {
+  border-radius: 1rem;
+  padding: 3rem;
+  background-image: linear-gradient(to bottom right, #9be15d, #39b385);
+  max-height: 13rem;
+}
+
+.close {
+  border-radius: 1rem;
+  padding: 3rem;
+  background-image: linear-gradient(to bottom right, #fa3841, #eb3d69);
+  max-height: 13rem;
+}
+
+.sortBtn {
+  grid-column: 1 / 3;
+  margin: 2rem auto;
+}
+
+/*  ////////////////////////    */
+/*        Footer        */
+
+footer {
+  background-color: #37383d;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 2rem;
+  color: white;
+  padding: 0 3rem;
+  opacity: 0;
+}
+
+.footer__info {
+  display: flex;
+  gap: 6rem;
+  align-items: center;
+  justify-content: center;
+
+  margin: auto;
+}
+
+.footer__value--deposit {
+  color: #9be15d;
+  font-size: 3rem;
+}
+
+.footer__value--withdraw {
+  color: #ff585f;
+  font-size: 3rem;
+}
+
+.footer__value--interest {
+  color: rgb(183, 222, 235);
+  font-size: 3rem;
+}
+
+.footer__logout {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer__time {
+  font-weight: 800;
+  color: rgb(243, 147, 2);
+}
+
+.footer__deposit,
+.footer__withdraw,
+.footer__interest {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.tooltip {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-100%);
+  transition: all 0.3s;
+
+  background-color: #c5b6b6e1;
+  color: rgb(82, 74, 74);
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  min-width: 120%;
+  text-align: center;
+}
+
+.footer__deposit:hover .tooltip--deposit,
+.footer__withdraw:hover .tooltip--withdraw,
+.footer__interest:hover .tooltip--interest {
+  visibility: visible;
+}
