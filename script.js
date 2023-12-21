@@ -1,6 +1,6 @@
 'use strict'
 
-
+document.querySelectorAll('.end__link').forEach(link => link.addEventListener('click', e => e.preventDefault()));
 
 
 /* Register Modal Window */
