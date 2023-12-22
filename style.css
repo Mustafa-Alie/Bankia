@@ -672,6 +672,8 @@ section {
 .author {
   font-size: 3rem;
   font-family: cursive;
+  color: rgba(206, 201, 148, 0.904);
+  text-decoration: none;
 }
 
 /*  /////////////////////////////////   */
